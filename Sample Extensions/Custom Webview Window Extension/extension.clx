@@ -1,0 +1,71 @@
+including GameOnExt.LXCore,
+including GameOn.LXCore,
+including GameOnOverlayObject.GameOnExt.LXCore,
+
+public SolutionManifest new SolutionManifest(GameOnExtension)
+{
+    //Define extension manifest
+    manifest.string="/manifest.lxmanifest";
+
+    //Initialise manifest.
+    new Manifest(manifest)
+}
+
+public ExtensionSettings new ExtensionSettings(GameOnExtension)
+{
+    //Define extension settings
+    settings.string="/settings.html";
+
+    //Initialise settings
+    new Settings(settings);
+
+    //If settings created successfully
+        if (new Settings(settings).exists = "True"){
+
+            //Define Publisher and Extension ID as registered with RWE
+            extensionID.string="RWE.ExtensionID.Sample_CustomWebview";
+            publisherID.string="RyanWalpoleEnterprises";
+
+            //Initialise the link between extension
+            create GameOnProfileAuthentication.ExtensionAuthentication(extensionID);
+            create GameOnProfileAuthentication.ExtensionAuthentication(publisherID)
+        }
+        else
+        {
+            //Extension fails to initialise
+            new GameOnExt.LXCore.FailureToExistProtocol(break)
+            !break(true);
+        }
+}
+
+public ExtensionData new ExtensionData(GameOnExtension)
+{
+    //Initialise extension
+    new GameOnOverlayObject(MyHTML5Extension)
+    {
+        OverlayExtensionsRegion.create(new(extensionaccesspoint))
+        {
+            icon.visibility="visible";                       //visible for icon, hidden for text button
+            icon.set="/src/icon.png";                        //icon for the button
+            alttitle.set="My Webview Wiki Extension";        //hover over tooltip text for button
+
+            //create an activity on button press
+            button.activity(new activity)
+            {
+                new GameOnOverlay.WebBrowserObject(htmlviewer)
+                {
+                    //Navigate to the RWE Website
+                    htmlviewer.src="http://www.ryanwalpole.com/";
+                    
+                    htmlviewer.Window(colour)="#595959";                            //Set Window Colour (Hex)
+                    htmlviewer.Window.TitleBar(colour)="Black";                     //Set title bar colour (Basic Colours)
+                    htmlviewer.Window.Property(WebBrowserBackground)="false";       //Have the web browser page be the background (false/true)
+                }
+            }
+
+            if GameOnOverlay.Suspended(true){
+                GameOnExtension.State="paused";
+            }
+        }
+    }
+}
