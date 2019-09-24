@@ -6,6 +6,7 @@ Version 190902 of the GameOn Driver introduces the ability to install extensions
  
 ## Samples
 Samples have been provided by RWE so that developers can get an easy idea of how an extension may be created. *Samples may be added or removed at any time by the developer*
+You can view the code for the samples by using the following links:
 
 **HTML Webview Extension** [[View Sample]](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/HTML%20Webview%20Extension)
 > Is an extension sample that takes advantage of the GameOn In-Game Overlay's "Extensions" area and adds a button that opens a lite web browser to the specified local HTML file. This sample includes a manifest, details HTML page and the general logic for the extension to function. The extension logic is a .clx file. CLX (Code LX Universal) can be edited with Visual Studio Code and the Code LX Editor (an upcoming version with native GameOn Extension Support is coming soon.)
@@ -15,6 +16,10 @@ Samples have been provided by RWE so that developers can get an easy idea of how
 
 **Custom Webview Window Extension** [[View Sample]](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Custom%20Webview%20Window%20Extension)
 > Is an extension sample that takes advantage of the GameOn In-Game Overlay's Web Browser object. The web browser object can be customised with a variety of colour combinations such as coloured backgrounds or title bars. This can be seen in this sample.
+
+## Download Sample Project Files
+You can download the project sample files from the following directory:
+[Sample Extensions/Code LX Project Files](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Code%20LX%20Project%20Files)
 
 ## Credits
 - GameOn Driver is a closed-source software product by Ryan Walpole Enterprises. [[Learn More]](http://www.gameondriver.com)
