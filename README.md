@@ -13,6 +13,9 @@ Samples have been provided by RWE so that developers can get an easy idea of how
 **Webview Game Wiki Extension** [[View Sample]](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Webview%20Game%20Wiki%20Extension)
 > Is an extension sample that takes advantage of the GameOn In-Game Overlay's "Extensions" area and adds a button that opens a lite web browser to the specified website. In this sample we used the Minecraft Wiki to demonstrate how a game developer might add an extension to their game's Wiki so that the user can access the Wiki from the Overlay as opposed to tabbing out and using a conventional web browser.
 
+**Custom Webview Window Extension** [[View Sample]](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Custom%20Webview%20Window%20Extension)
+> Is an extension sample that takes advantage of the GameOn In-Game Overlay's Web Browser object. The web browser object can be customised with a variety of colour combinations such as coloured backgrounds or title bars. This can be seen in this sample.
+
 ## Credits
 - GameOn Driver is a closed-source software product by Ryan Walpole Enterprises. [[Learn More]](http://www.gameondriver.com)
 - Ryan Walpole Enterprises is the developer of sample extensions in this repository. [[Learn More]](http://www.ryanwalpole.com)
