@@ -24,8 +24,6 @@ public Manifest new Manifest(this.manifest)
 
     extension.Dependencies(set)
     {
-        //Dependencies can be added here and won't be required as "including" statements for individual extension files.
-        Dependency.Parent(LXCore)
         [
         GameOnOverlayObject;
         GameOnExt;
