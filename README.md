@@ -19,7 +19,7 @@ You can view the code for the samples by using the following links:
 
 ## Download Sample Project Files
 You can download the project sample files from the following directory:
-[Sample Extensions/Code LX Project Files](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Code%20LX%20Project%20Files)
+[Sample Extensions/Code LX Project Files](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/)
 
 ## Credits
 - GameOn Driver is a closed-source software product by Ryan Walpole Enterprises. [[Learn More]](http://www.gameondriver.com)
