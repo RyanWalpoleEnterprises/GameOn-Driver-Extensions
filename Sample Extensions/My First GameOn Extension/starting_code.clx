@@ -1,0 +1,40 @@
+including GameOnExt,
+including GameOn,
+including GameOnOverlayObject,
+
+public SolutionManifest new SolutionManifest(GameOnExtension)
+{
+    //Define extension manifest
+    manifest.string="/manifest.lxmanifest";
+
+    //Initialise manifest.
+    new Manifest(manifest)
+}
+
+public ExtensionData new ExtensionData(GameOnExtension)
+{
+    //Initialise extension
+    new GameOnOverlayObject(MyFirstExtensionWooHoo)
+    {
+        OverlayExtensionsRegion.create(new(extensionaccesspoint))
+        {
+            icon.visibility="visible";         //visible for icon, hidden for text button
+            icon.set="/icon.png";              //icon for the button
+            alttitle.set="Click Me!";          //hover over tooltip text for button
+
+            //create an activity on button press
+            button.activity(new activity)
+            {
+                new GameOnOverlay.Window(MyWindow)
+                {
+                    //Print the text "Hello World"
+                    new TextLabel = TextLabel1();
+                    TextLabel1.Text.String = "Hello World";
+                }
+            }
+
+            if GameOnOverlay.Suspended(true){
+                GameOnExtension.State="paused";
+            }
+        }
+    }
