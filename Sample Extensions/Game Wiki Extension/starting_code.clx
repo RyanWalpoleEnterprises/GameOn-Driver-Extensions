@@ -1,0 +1,45 @@
+including GameOnExt.LXCore;
+including GameOn.LXCore;
+including GameOnOverlayObject;
+
+public SolutionManifest new SolutionManifest(GameOnExtension)
+{
+    //Define extension manifest
+    manifest.string="/manifest.lxmanifest";
+
+    //Initialise manifest.
+    new Manifest(manifest)
+}
+
+public ExtensionData new ExtensionData(GameOnExtension)
+{
+    //Initialise extension
+    new GameOnOverlayObject(MyFirstExtensionWooHoo)
+    {
+        OverlayExtensionsRegion.create(new(extensionaccesspoint))
+        {
+            icon.visibility="visible";         				//visible for icon, hidden for text button
+            icon.set="/icon.png";              				//icon for the button
+            alttitle.set="Visit the Minecraft Wiki!";          	//hover over tooltip text for button
+
+            //create an activity on button press
+            button.activity(new activity)
+            {
+                new GameOnOverlay.Window(MyWindow)
+                {
+			  Window.State = windowed;
+				Window.Height = 800px
+				Window.Length = 800px
+
+                    new WebBrowserObject = WebBrowser1();
+    			  WebBrowser1.src.ToString = "https://minecraftwiki.net"
+    			  WebBrowser1.AllowInsecureBrowsing = true;
+    			  WebBrowser1.Dock = fill;
+                }
+            }
+
+            if GameOnOverlay.Suspended(true){
+                GameOnExtension.State="paused";
+            }
+        }
+    }

@@ -1,0 +1,25 @@
+including GameOnExt.LXCore, 
+including GameOn.LXCore, 
+
+public Manifest new Manifest(this.manifest) 
+{ 
+    extension.Name.String  = "My First Extension";
+    extension.Publisher.String  = "My Name Here";
+   
+    //the minimum possible version is 190902, when extensions were introduced
+    extension.MinVer.String  = "190902";
+
+    extension.VersionID.String  = "1.0";
+    extension.Details.String  = "My really cool first extension that prints Hello World in the overlay";
+
+    //EN-AU is the string for English-Australia
+    extension.Locale.String  = "EN-AU";
+}
+extension.Dependencies(set)
+{
+   [
+      GameOnOverlayObject;
+      GameOnExt;
+      GameOn;
+   ]
+}
