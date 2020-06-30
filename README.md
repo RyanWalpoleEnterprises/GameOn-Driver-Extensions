@@ -15,7 +15,7 @@ You can view the code for the samples by using the following links:
 > Is an extension sample that takes advantage of the GameOn In-Game Overlay's "Extensions" area and adds a button that opens a window that contains a graphical user interface. This extension is explained and outlined in a tutorial that can be found on the GameOn Developers Website) [[View Tutorial]](https://ryanwalpole.com/developer/gameon/tutorials/adding-a-gui-to-my-extension-window)
 
 **Game Wiki Extension** [[View Sample]](https://github.com/RyanWalpoleEnterprises/GameOn-Driver-Extensions/tree/master/Sample%20Extensions/Game%20Wiki%20Extension)
-> Is an extension sample that takes advantage of the GameOn In-Game Overlay's Web Browser object that can be used to send the user to any website. In this example, we used the Minecraft Wiki which could be useful to a person playing Minecraft who might want to look up certain information on the wiki.
+> Is an extension sample that takes advantage of the GameOn In-Game Overlay's Web Browser object that can be used to send the user to any website. In this example, we used the Minecraft Wiki which could be useful to a person playing Minecraft who might want to look up certain information on the wiki. A tutorial is available for this sample and can be found on the GameOn Developers Website. [[View Tutorial]](https://ryanwalpole.com/developer/gameon/tutorials/creating-a-webbrowser-extension)
 
 ## Credits
 - GameOn Driver is a closed-source software product by Ryan Walpole Enterprises. [[Learn More]](http://www.gameondriver.com)
