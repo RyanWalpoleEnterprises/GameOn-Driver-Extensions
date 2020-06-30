@@ -27,9 +27,9 @@ public ExtensionData new ExtensionData(GameOnExtension)
             {
                 new GameOnOverlay.Window(MyWindow)
                 {
-			  Window.State = windowed;
-				Window.Height = 800px
-				Window.Width = 800px
+			  MyWindow.State = windowed;
+				MyWindow.Height = 800px
+				MyWindow.Width = 800px
 
                     new WebBrowserObject = WebBrowser1();
     			  WebBrowser1.src.ToString = "https://minecraftwiki.net"
