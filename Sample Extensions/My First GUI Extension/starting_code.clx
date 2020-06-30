@@ -1,0 +1,39 @@
+including GameOnExt.LXCore;
+including GameOn.LXCore;
+including GameOnOverlayObject;
+including My_First_Extension.WindowControls;
+
+public SolutionManifest new SolutionManifest(GameOnExtension)
+{
+    //Define extension manifest
+    manifest.string="/manifest.lxmanifest";
+
+    //Initialise manifest.
+    new Manifest(manifest)
+}
+
+public ExtensionData new ExtensionData(GameOnExtension)
+{
+    //Initialise extension
+    new GameOnOverlayObject(MyFirstExtensionWooHoo)
+    {
+        OverlayExtensionsRegion.create(new(extensionaccesspoint))
+        {
+            icon.visibility="visible";         //visible for icon, hidden for text button
+            icon.set="/icon.png";              //icon for the button
+            alttitle.set="Click Me!";          //hover over tooltip text for button
+
+            //create an activity on button press
+            button.activity(new activity)
+            {
+                new GameOnOverlay.Window(MyWindow)
+                {
+                    WindowControls.Load();
+                }
+            }
+
+            if GameOnOverlay.Suspended(true){
+                GameOnExtension.State="paused";
+            }
+        }
+    }

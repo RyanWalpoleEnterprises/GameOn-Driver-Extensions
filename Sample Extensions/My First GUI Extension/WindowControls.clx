@@ -1,0 +1,29 @@
+including GameOnExt.LXCore;
+including GameOn.LXCore;
+
+public void new WindowControls(Load) 
+{ 
+    new TitlePanel = TitlePanel1();
+         TitlePanel1.Title.ToString = "Extension Window Title";
+         TitlePanel1.Dock = top;
+         TitlePanel1.Height = default;
+
+    new ContentPanel = Panel1();
+         Panel1.Dock = fill;
+         Panel1.Padding.Left = 3px;
+         Panel1.Contents 
+         {
+             new TextLabel = HelloWorldText();
+                 HelloWorldText.Text.ToString = "Hello World";
+                 HelloWorldText.Font = default;
+                 HelloWorldText.Font.Size = 12px;
+
+            new Button = CloseButton();
+                CloseButton.Text.ToString = "Close";
+                CloseButton.Padding.Top = 3px;
+                CloseButton.activity(new activity)
+                     {
+                         MyWindow.Close();
+                     }
+         }
+}
